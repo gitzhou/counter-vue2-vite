@@ -1,0 +1,45 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "target": "ES2020",
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "preserveValueImports": false,
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ],
+  "exclude": [
+    "src/**/*.test.*"
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "lib": [
+        "es2020"
+      ],
+      "module": "CommonJS",
+      "target": "es2020",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "moduleResolution": "node",
+      "experimentalDecorators": true
+    }
+  }
+}
